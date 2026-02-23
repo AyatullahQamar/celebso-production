@@ -1,17 +1,27 @@
 @import "tailwindcss";
- body {
-  cursor: none;
-  
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
- 
-}
- 
-::selection {
-  background-color: #a1ff62; }
 
- 
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback', Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Hide custom cursor on touch devices */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+}
+
+::selection {
+  background-color: #a1ff62;
+}
+
 ::-moz-selection {
-  background-color: #a1ff62; 
+  background-color: #a1ff62;
 }
 

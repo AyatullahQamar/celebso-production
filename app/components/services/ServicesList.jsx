@@ -91,12 +91,12 @@ const services = [
 
 export default function ServicesList() {
   return (
-    <section className="max-w-7xl mx-auto px-6 pb-40">
-      <div className="space-y-28">
+    <section className="max-w-7xl mx-auto px-4 md:px-6 pb-20 md:pb-40">
+      <div className="space-y-16 md:space-y-28">
         {services.map((service, index) => (
           <div
             key={index}
-            className="grid md:grid-cols-[1fr_2fr] gap-12 border-t border-[#312e2e]/20 pt-16"
+            className="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-12 border-t border-[#312e2e]/20 pt-8 md:pt-16"
           >
             <h3 className="text-2xl md:text-3xl font-medium leading-tight text-[#312e2e]">
               {service.title}

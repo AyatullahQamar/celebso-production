@@ -18,7 +18,7 @@ export default function LiveExperience() {
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#fcb900]/20 blur-[120px]"></div>
         </div> 
-        <div className="relative z-10 px-10 md:px-20 py-20 flex flex-col md:flex-row justify-between items-center gap-10">
+        <div className="relative z-10 px-6 md:px-20 py-12 md:py-20 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-10">
  
           <div className="max-w-2xl text-center md:text-left">
 
@@ -26,7 +26,7 @@ export default function LiveExperience() {
               Live Experience
             </p>
 
-            <h2 className="mt-4 text-2xl md:text-4xl font-semibold text-white leading-tight">
+            <h2 className="mt-4 text-xl sm:text-2xl md:text-4xl font-semibold text-white leading-tight">
               Book Your Ticket <br />
               <span className="text-[#fcb900]">
                 For The Next Big Show
@@ -44,7 +44,7 @@ export default function LiveExperience() {
             <Link
               href="#"
               target="_blank"
-              className="inline-flex items-center gap-4 px-10 py-2.5 rounded-full bg-[#fcb900] text-black font-semibold text-lg tracking-wide transition hover:scale-105 duration-300 hover:shadow-[0_5px_40px_rgba(252,185,0,0.5)]"
+              className="inline-flex items-center gap-3 md:gap-4 px-6 md:px-10 py-2.5 rounded-full bg-[#fcb900] text-black font-semibold text-base md:text-lg tracking-wide transition hover:scale-105 duration-300 hover:shadow-[0_5px_40px_rgba(252,185,0,0.5)]"
             >
               Book Now
 
