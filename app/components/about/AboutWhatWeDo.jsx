@@ -1,12 +1,12 @@
 export default function AboutWhatWeDo() {
   return (
-    <section className="max-w-7xl mx-auto px-6 py-24">
+    <section className="max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24">
       
-      <h2 className="text-4xl font-bold mb-16 text-[#312e2e]">
+      <h2 className="text-3xl md:text-4xl font-bold mb-10 md:mb-16 text-[#312e2e]">
         What We Do
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-14">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-14">
         
        
         <div className="border-t pt-6">

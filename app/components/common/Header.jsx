@@ -8,11 +8,11 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[1100px] px-4">
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#2c2c2c] to-[#1f1f1f] text-white shadow-2xl">
+    <header className="fixed top-3 md:top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] max-w-[1100px] px-0">
+      <div className="relative overflow-hidden rounded-xl md:rounded-2xl bg-gradient-to-b from-[#2c2c2c] to-[#1f1f1f] text-white shadow-2xl">
 
        
-        <div className="flex items-center justify-between px-6 py-4">
+        <div className="flex items-center justify-between px-4 md:px-6 py-3 md:py-4">
  
           <button
             onClick={() => setOpen(!open)}
@@ -59,7 +59,7 @@ export default function Header() {
 
       
           <Link href="/" className="absolute left-1/2 -translate-x-1/2">
-            <img src="assest/celebso.webp" alt="Celebso" className="w-28" />
+            <img src="assest/celebso.webp" alt="Celebso" className="w-20 md:w-28" />
           </Link>
 
      
@@ -93,7 +93,7 @@ export default function Header() {
       }}
       className="overflow-hidden bg-black/90 w-full"
     >
-      <nav className="flex flex-col md:flex-row justify-center items-center gap-6 py-10 border-t border-[#fcb900]">
+      <nav className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 py-6 md:py-10 border-t border-[#fcb900]">
         {[
           { name: "Home", href: "/" },
           { name: "About", href: "/about" },
@@ -128,7 +128,7 @@ export default function Header() {
                 ease: [0.76, 0, 0.24, 1]
               }
             }}
-            className="text-[6vw] md:text-[1.2vw] capitalize font-medium tracking-wide text-white/90 hover:text-[#fcb900] transition-colors"
+            className="text-2xl md:text-[1.2vw] capitalize font-medium tracking-wide text-white/90 hover:text-[#fcb900] transition-colors"
           >
             {item.name}
           </motion.a>

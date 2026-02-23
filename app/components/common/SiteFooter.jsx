@@ -2,39 +2,32 @@
 
 export default function SiteFooter() {
   return (
-    <footer className="relative w-full min-h-[30vh] bg-[#d8d8d8] text-[#312e2e] px-12 py-10 overflow-hidden">
+    <footer className="relative w-full bg-[#d8d8d8] text-[#312e2e] px-4 md:px-12 py-10 pb-24 md:pb-20 overflow-hidden">
 
  
-      <div className="w-full h-full flex flex-col items-center justify-center text-center">
+      <div className="w-full flex flex-col items-center justify-center text-center">
 
-        <h3 className="text-lg md:text-[1vw] font- tracking-wide mb-6 uppercase">
-          Celebso Production – Launching Talent. Creating Celebrities. Taking India Global.
+        <h3 className="text-sm md:text-[1vw] tracking-wide mb-6 uppercase px-4">
+          Celebso Production -- Launching Talent. Creating Celebrities. Taking India Global.
         </h3>
-<h1 className="text-2xl sm:text-2xl md:text-2xl lg:text-2xl leading-none font-light">
-  <span className="font-serif italic">info</span>
-  <span className="font-bold">@celebso.com</span>
-</h1>
+        <h1 className="text-xl sm:text-2xl leading-none font-light">
+          <span className="font-serif italic">info</span>
+          <span className="font-bold">@celebso.com</span>
+        </h1>
 
         <p className="mt-4 uppercase text-xs tracking-[0.30em]">
           Discuter
         </p>
-
-        {/* <a
-          href="tel:+919784626443"
-          className="mt-6 text-3xl font-semibold tracking-tight hover:opacity-70 transition"
-        >
-          +91 97846 26443
-        </a> */}
       </div>
 
       
-      <div className="w-full absolute bottom-0 left-0 py-10 md:py-6 flex justify-center items-center">
+      <div className="w-full mt-10 md:mt-0 md:absolute md:bottom-0 md:left-0 py-6 flex justify-center items-center">
         <p className="text-sm text-[#312e2e]/70">
-          © Celebso Production 2025
+          &copy; Celebso Production 2025
         </p>
       </div>
  
-      <div className="fixed bottom-4 right-4 flex gap-6 z-40">
+      <div className="fixed bottom-4 right-4 flex gap-4 md:gap-6 z-40">
 
         <SocialIcon>
           <InstagramIcon />
@@ -61,7 +54,7 @@ function SocialIcon({ children }) {
   return (
     <a
       href="#"
-      className="w-8 h-8 bg-[#fcb900] border border-[#fcb900]/20 flex items-center justify-center 
+      className="w-7 h-7 md:w-8 md:h-8 bg-[#fcb900] border border-[#fcb900]/20 flex items-center justify-center 
                  hover:border-[#312e2e] hover:scale-110 transition-all duration-300"
     >
       {children}

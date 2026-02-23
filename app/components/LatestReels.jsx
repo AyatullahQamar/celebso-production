@@ -5,24 +5,24 @@ import { useRef, useState , useEffect } from "react";
 export default function LatestReels() {
   return (
     <>
-      <section className="relative py-32 bg-neutral-950 text-white overflow-hidden">
+      <section className="relative py-16 md:py-32 bg-neutral-950 text-white overflow-hidden">
  
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.06),transparent_60%)]" />
 
-        <div className="relative max-w-7xl mx-auto">
+        <div className="relative max-w-7xl mx-auto px-4 md:px-6">
 
          
-          <div className="flex flex-col lg:flex-row justify-between mb-20 gap-10">
-            <h2 className="text-4xl lg:text-5xl font-semibold">
+          <div className="flex flex-col lg:flex-row justify-between mb-10 md:mb-20 gap-6 md:gap-10">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold">
               Latest <span className="text-white/60">Reels</span>
             </h2>
 
-            <p className="max-w-xl text-2xl text-white/70">
+            <p className="max-w-xl text-lg md:text-2xl text-white/70">
               Curated short-form visuals built for attention, emotion & performance.
             </p>
           </div>
  
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:px-14">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10 md:px-14">
             <ReelCard video="/reels/reel1.mp4" handle="@dummyhandle" />
              <ReelCard video="/reels/reel2.mp4" handle="@dummyhandle" />
             <ReelCard video="/reels/reel3.mp4" handle="@dummyhandle" />
@@ -84,7 +84,7 @@ function ReelCard({ video, handle }) {
   };
 
   return (
-    <div className="group relative rounded-[8px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl">
+    <div className="group relative rounded-lg overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl">
  
       <video
         ref={videoRef}
@@ -93,18 +93,18 @@ function ReelCard({ video, handle }) {
         muted
         loop
         playsInline
-        className="w-full h-[450px] object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.05]"
+        className="w-full h-[280px] sm:h-[350px] md:h-[450px] object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.05]"
       />
  
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
  
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-1.5 text-xs bg-white/10 backdrop-blur-md border border-white/20">
+      <div className="absolute bottom-12 md:bottom-6 left-1/2 -translate-x-1/2 px-3 md:px-4 py-1 md:py-1.5 text-[10px] md:text-xs bg-white/10 backdrop-blur-md border border-white/20 whitespace-nowrap">
         {handle}
       </div>
  
       <button
         onClick={togglePlay}
-        className="absolute bottom-6 left-6 w-9 h-9 rounded-full bg-[#fcb900] text-[#312e2e]
+        className="absolute bottom-3 md:bottom-6 left-3 md:left-6 w-7 h-7 md:w-9 md:h-9 rounded-full bg-[#fcb900] text-[#312e2e]
                    backdrop-blur-md border border-white/20 flex items-center justify-center
                    opacity-90 group-hover:opacity-100 transition"
       >
@@ -113,7 +113,7 @@ function ReelCard({ video, handle }) {
  
       <button
         onClick={toggleMute}
-        className="absolute bottom-6 right-6 w-9 h-9 rounded-full bg-[#fcb900] text-[#312e2e]
+        className="absolute bottom-3 md:bottom-6 right-3 md:right-6 w-7 h-7 md:w-9 md:h-9 rounded-full bg-[#fcb900] text-[#312e2e]
                    backdrop-blur-md border border-white/20 flex items-center justify-center
                    opacity-90 group-hover:opacity-100 transition"
       >

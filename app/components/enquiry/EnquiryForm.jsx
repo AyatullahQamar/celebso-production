@@ -23,7 +23,7 @@ export default function EnquiryForm() {
   };
 
   return (
-    <section className="relative min-h-screen bg-neutral-950 px-6 py-40 overflow-hidden">
+    <section className="relative min-h-screen bg-neutral-950 px-4 md:px-6 py-24 md:py-40 overflow-hidden">
       
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.06),transparent_60%)]" />
 
@@ -35,7 +35,7 @@ export default function EnquiryForm() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mb-16 max-w-2xl"
+          className="mb-10 md:mb-16 max-w-2xl"
         >
           <span className="text-xs uppercase tracking-[0.3em] text-white/50">
             Booking Request
@@ -59,7 +59,7 @@ export default function EnquiryForm() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10 border-t border-white/10 pt-12"
+          className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 md:gap-y-10 border-t border-white/10 pt-8 md:pt-12"
         >
 
           {[
@@ -74,7 +74,7 @@ export default function EnquiryForm() {
             <motion.div
               key={index}
               variants={fadeUp}
-              className="flex flex-col gap-2 px-6"
+              className="flex flex-col gap-2 px-0 md:px-6"
             >
               <label className="text-xs uppercase tracking-widest text-white/40">
                 {field.label}
@@ -100,7 +100,7 @@ export default function EnquiryForm() {
           {/* Button */}
           <motion.div
             variants={fadeUp}
-            className="w-fit md:col-span-2 mt-10 bg-[#fcb9005d] px-10"
+            className="w-fit md:col-span-2 mt-6 md:mt-10 bg-[#fcb9005d] px-6 md:px-10"
           >
             <button
               type="submit"
