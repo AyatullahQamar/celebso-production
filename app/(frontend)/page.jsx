@@ -1,8 +1,9 @@
 import Hero from "../components/Hero";
 import LiveExperience from "../components/LiveExperience";
 import TeaserSection from "../components/TeaserSection";
-import ArtistIdentity from "../components/ArtistIdentity";
+
 import LatestReels from "../components/LatestReels";
+import MagazineLayout from "../components/MagazineLayout";
  
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
       <Hero />
       <LiveExperience />
       <TeaserSection />
-      <ArtistIdentity />
+      <MagazineLayout />
       <LatestReels />
      
     </>

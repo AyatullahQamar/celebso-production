@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState , useEffect } from "react";
 
 export default function LatestReels() {
   return (
@@ -23,10 +23,10 @@ export default function LatestReels() {
           </div>
  
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:px-14">
-            <ReelCard video="/videos/reel-1.mp4" handle="@dummyhandle" />
-            <ReelCard video="/videos/reel-2.mp4" handle="@dummyhandle" />
-            <ReelCard video="/videos/reel-3.mp4" handle="@dummyhandle" />
-            <ReelCard video="/videos/reel-4.mp4" handle="@dummyhandle" />
+            <ReelCard video="/reels/reel1.mp4" handle="@dummyhandle" />
+             <ReelCard video="/reels/reel2.mp4" handle="@dummyhandle" />
+            <ReelCard video="/reels/reel3.mp4" handle="@dummyhandle" />
+             <ReelCard video="/reels/singer.mp4" handle="@dummyhandle" />
           </div>
         </div>
       </section>
@@ -39,6 +39,31 @@ function ReelCard({ video, handle }) {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
+  useEffect(() => {
+  const video = videoRef.current;
+  if (!video) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        // screen me aayi → play
+        video.play().catch(() => {});
+        setIsPlaying(true);
+      } else {
+        // screen se gayi → pause
+        video.pause();
+        setIsPlaying(false);
+      }
+    },
+    {
+      threshold: 0.65, // 65% visible hone par hi play
+    }
+  );
+
+  observer.observe(video);
+
+  return () => observer.disconnect();
+}, []);
 
   const togglePlay = () => {
     if (!videoRef.current) return;
@@ -64,7 +89,7 @@ function ReelCard({ video, handle }) {
       <video
         ref={videoRef}
         src={video}
-        autoPlay
+        
         muted
         loop
         playsInline

@@ -7,7 +7,7 @@ export default function ServicesHero() {
           Our Capabilities
         </p>
 
-        <h1 className="text-[clamp(3.2rem,7vw,7rem)] font-semibold leading-[1.02] max-w-6xl text-[#312e2e]">
+        <h1 className="text-[clamp(3.2rem,4vw,4rem)] font-semibold leading-[1.02] max-w-6xl text-[#312e2e]">
           We don’t chase fame.
           <br />
           <span className="italic text-[#fcb900]">

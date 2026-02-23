@@ -2,30 +2,29 @@
 
 export default function SiteFooter() {
   return (
-    <footer className="relative w-full min-h-[40vh] bg-[#d8d8d8] text-[#312e2e] px-12 py-10 overflow-hidden">
+    <footer className="relative w-full min-h-[30vh] bg-[#d8d8d8] text-[#312e2e] px-12 py-10 overflow-hidden">
 
  
       <div className="w-full h-full flex flex-col items-center justify-center text-center">
 
-        <h3 className="text-lg md:text-[1vw] font-semibold tracking-wide mb-6 uppercase">
+        <h3 className="text-lg md:text-[1vw] font- tracking-wide mb-6 uppercase">
           Celebso Production – Launching Talent. Creating Celebrities. Taking India Global.
         </h3>
+<h1 className="text-2xl sm:text-2xl md:text-2xl lg:text-2xl leading-none font-light">
+  <span className="font-serif italic">info</span>
+  <span className="font-bold">@celebso.com</span>
+</h1>
 
-        <h1 className="text-[6vw] md:text-[3vw] leading-none font-light">
-          <span className="font-serif italic">hey</span>
-          <span className="font-bold">@celebso.in</span>
-        </h1>
-
-        <p className="mt-4 uppercase text-xs tracking-[0.35em]">
+        <p className="mt-4 uppercase text-xs tracking-[0.30em]">
           Discuter
         </p>
 
-        <a
+        {/* <a
           href="tel:+919784626443"
           className="mt-6 text-3xl font-semibold tracking-tight hover:opacity-70 transition"
         >
           +91 97846 26443
-        </a>
+        </a> */}
       </div>
 
       
